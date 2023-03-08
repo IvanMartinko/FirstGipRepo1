@@ -12,7 +12,20 @@ fun main(args: Array<String>) {
     //Zadatak 3 - Recieve the name of the user from the console. Print out the length
     println("Write your name:")
     val myInput = readLine()
-    println(myInput?.length)
+    println("Name length is: ${myInput?.length}")
+
+    //Zadatak 4 - Read a message from the console. Print out the message or a default greeting "Hi" (assume that
+    // readline can return a null value
+    println("Enter a greeting")
+    val greeting = readLine() ?: "Hi"
+    println(greeting)
+
+    //Zadatak 5 - Read a number from a console, read variable is not null, multiply that number by 5
+    println("Enter number:")
+    val number: Double? = readLine()?.toDouble()  // readline je string pa ga treba prebacit u double
+    println(number!! * 5)  // !! mu govori da nije nullable i onda ne treba pisat times zbog toga  (ali treba izbjegavat ovo)
+
+    //Zadatak 6 (DZ) - Read a number from a console and convert it to Double. Multiply by 7 and convert to string
 
 
 
