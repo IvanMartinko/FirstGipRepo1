@@ -25,6 +25,20 @@ fun main(args: Array<String>) {
     val newNumbers = myUpdate(numbers, numbersLambda)
     println(newNumbers)
     println(numbers)
+    numbers.forEach{ print("${it / 10} ")}
+    println()
+    println(numbers)
+    val newNames = names.filter { it.length > 4 }
+    println(names)
+    println(newNames)
+    val resultMap = names.map { it -> it.uppercase() }
+    println(names)
+    println(resultMap)
+    val stringsConcatenated = names.reduce{ acc: String, s: String -> "$acc$s" }
+    println(stringsConcatenated)
+    val totalChars = names.map{ it.length}.filter { it > 4 }.reduce{ acc, i -> acc + i}
+    println(totalChars)
+    
 }
 
 fun myUpdate(numbers: ArrayList<Int>, numbersLambda: (Int) -> Int): ArrayList<Int> {
