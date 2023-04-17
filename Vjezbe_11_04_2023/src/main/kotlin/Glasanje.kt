@@ -1,0 +1,3 @@
+interface Glasanje {
+    fun glasajSe()
+}
